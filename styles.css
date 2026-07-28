@@ -1,0 +1,79 @@
+@import url(assets/animations.css);
+@import url(assets/profile-card.css);
+@import url(assets/profile-bio.css);
+@import url(assets/header.css);
+@import url(assets/about.css);
+@import url(assets/background-colors-mode.css);
+@import url(assets/navigation.css);
+@import url(assets/skills.css);
+@import url(assets/works.css);
+@import url(assets/contact.css);
+@import url(assets/footer.css);
+@import url(assets/blob.css);
+@import url(assets/burger-menu.css);
+@import url(assets/media.css);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Koulen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    background-color: var(--base-color);
+    color: var(--text-color);
+    line-height: 1.2;
+    overflow-x: hidden;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px 10% 40px;
+    gap: 60px;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.reveal-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+ul{
+    list-style: none;
+}
+
+h3 {
+    font-size: 70px;
+    padding-left: 1rem;
+    color: var(--text-color);
+}
+
+p {
+    font-size: 40px;
+    color: var(--text-secondary);
+}
+
+span {
+    color: var(--accent-color);
+}

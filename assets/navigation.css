@@ -1,0 +1,61 @@
+.navigation__pins {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--base-variant);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--accent-color);
+    border-radius: 40px;
+    padding: 20px 10px;
+    z-index: 1000;
+}
+
+.navigation__pins a::after {
+    content: attr(title);
+    position: absolute;
+    left: 70px;
+    background: var(--base-variant);
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: 0.3s;
+    pointer-events: none;
+    backdrop-filter: blur(5px);
+}
+
+.navigation__pins a:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+    transform: scale(1.1);
+}
+
+.navigation__pins ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style: none;
+}
+
+.navigation__pins a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav__svg {
+    fill: var(--text-color);
+    width: 24px;
+}
+
+.navigation__pins a:hover .nav__svg {
+    fill: var(--base-color);
+}

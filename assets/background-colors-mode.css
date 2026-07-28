@@ -1,0 +1,28 @@
+:root {
+    --base-color: #F4F7FA;
+    --base-variant: #E1E6EB;
+    --base-background-color-button:#1E1E1E;
+    --text-color: #1E1E1E;
+    --text-secondary: #4A4A4A;
+    --text-third:#FFFFFF;
+    --primary-color: #292F36;
+    --accent-color: #2BB5A7;
+    --header-height: 80px;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+.dark-mode {
+    --base-color: #292F36;
+    --base-variant: #1E1E1E;
+    --base-background-color-button:#FFFFFF;
+    --text-color: #FFFFFF;
+    --text-secondary: #FFFFFF;
+    --text-third:#000;
+    --primary-color: #FFFFFF;
+    --accent-color: #86f7e6;
+    --glass-bg: rgba(15, 15, 15, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+

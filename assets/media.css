@@ -1,0 +1,201 @@
+@media (max-width: 1180px) {
+    .hard__skills {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 80px;
+        gap: 40px;
+    }
+
+    .container__skills {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        width: 100%;
+    }
+
+    .skill-card {
+        width: 100%;
+        height: 35vh;
+        min-height: 260px;
+    }
+
+    .soft__skills {
+        max-width: 100%;
+        width: 100%;
+        position: static;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    body .profile {
+        grid-template-columns: 1fr;
+        padding: 120px 5% 40px;
+        gap: 50px;
+        justify-items: center;
+    }
+
+    .profile__bio {
+        padding-left: 0;
+        text-align: center;
+        align-items: center;
+    }
+
+    .bio__text, .bio__subtext {
+        padding-left: 0;
+    }
+
+    .about__content {
+        flex-direction: column;
+        padding: 50px 30px;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .about__greeting,
+    .about__description {
+        padding-left: 0;
+    }
+
+    .about__image {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        aspect-ratio: 4/5;
+    }
+
+    .work-card {
+        flex: 0 0 60vw;
+        height: 45vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 5%;
+    }
+
+    .header__logo {
+        font-size: 16px;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .navigation__pins {
+        display: none;
+    }
+
+    .works__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .works__main-title {
+        font-size: 6vh;
+    }
+
+    .contact__content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact__info {
+        text-align: center;
+        align-items: center;
+    }
+
+    .contact__socials {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    .form__row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .footer__content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__logo {
+        font-size: 13px;
+    }
+
+    .header__controls {
+        gap: 10px;
+    }
+
+    body .profile, .about, .works, .contact {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .bio__text {
+        font-size: 36px;
+    }
+
+    .bio__subtext {
+        font-size: 16px;
+    }
+
+    .profile__card {
+        padding: 30px 20px;
+    }
+
+    .profile__avatar {
+        width: 180px;
+        height: 180px;
+    }
+
+    .container__skills {
+        grid-template-columns: 1fr;
+    }
+
+    .works__header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .works__main-title {
+        font-size: 44px;
+    }
+
+    .work-card {
+        min-width: 85vw;
+        height: 55vh;
+    }
+
+    .glass__title {
+        font-size: 26px;
+    }
+
+    .glass__links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .glass__btn {
+        text-align: center;
+    }
+}
+
+.reveal-hidden {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

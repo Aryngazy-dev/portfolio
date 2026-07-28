@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryngazy / Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=location_on" />
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Koulen&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<header class="header" id="mainHeader">
+    <div class="progress-bar" id="scrollBar"></div>
+
+    <div class="header__logo" style="font-weight: 900; color: var(--accent-color); letter-spacing: 1px;">
+        MYPORTFOLIO
+    </div>
+
+    <nav class="header__nav">
+        <ul class="nav__list">
+            <li><a href="#home" class="nav__link">Home</a></li>
+            <li><a href="#about" class="nav__link">About</a></li>
+            <li><a href="#skills" class="nav__link">Skills</a></li>
+            <li><a href="#works" class="nav__link">Works</a></li>
+            <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="header__controls">
+        <button class="burger" id="burger-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+        </button>
+
+        <button class="header__theme-switch" id="theme-switch" aria-label="Toggle theme">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24" fill="currentColor">
+                <path
+                    d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24" fill="currentColor">
+                <path
+                    d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z" />
+            </svg>
+        </button>
+    </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+    <nav class="mobile-nav__inner">
+        <ul class="mobile-nav__list">
+            <li><a href="#home" class="mobile-nav__link">Home</a></li>
+            <li><a href="#about" class="mobile-nav__link">About</a></li>
+            <li><a href="#skills" class="mobile-nav__link">Skills</a></li>
+            <li><a href="#works" class="mobile-nav__link">Works</a></li>
+            <li><a href="#contact" class="mobile-nav__link">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="mobile-nav__overlay" id="mobileNavOverlay"></div>
+<main class="main">
+    <div class="profile" id="home">
+        <div class="profile__card" id="profile-card">
+            <div class="profile__image-wrapper" id="profile-image">
+                <img class="profile__avatar" id="avatar-img" src="assets/image/Mask group (1).png"
+                    alt="Portrait of Aryngazy, frontend developer">
+            </div>
+            <p class="profile__name" id="profile-name">Aryngazy</p>
+            <p class="profile__role" id="profile-role">Frontend Developer</p>
+            <p class="profile__email" id="profile-email"><svg class="svg__icon-2" xmlns="http://www.w3.org/2000/svg"
+                    height="24px" viewBox="0 -960 960 960" width="24px" fill="#">
+                    <path
+                        d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                </svg>maratulyaryngazy@gmail.com</p>
+            <p class="profile__location" id="profile-location"><svg class="svg__icon-3"
+                    xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#">
+                    <path
+                        d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                </svg>Kazakhstan</p>
+            <p class="profile__work" id="profile-work"><svg class="svg__icon-4" xmlns="http://www.w3.org/2000/svg"
+                    height="24px" viewBox="0 -960 960 960" width="24px" fill="#">
+                    <path
+                        d="M160-120q-33 0-56.5-23.5T80-200v-440q0-33 23.5-56.5T160-720h160v-80q0-33 23.5-56.5T400-880h160q33 0 56.5 23.5T640-800v80h160q33 0 56.5 23.5T880-640v440q0 33-23.5 56.5T800-120H160Zm0-80h640v-440H160v440Zm240-520h160v-80H400v80ZM160-200v-440 440Z" />
+                </svg>Part Time / Remote Work</p>
+        </div>
+        <div class="profile__bio">
+            <div class="bio__group">
+                <span class="code-tag">
+                    &lt;h1&gt;
+                </span>
+                <h3 class="bio__text">
+                    Hey<br>
+                    I'm <span class="bio__name">Aryngazy</span><br>
+                    Frontend Developer
+                </h3>
+                <span class="code-tag">&lt;/h1&gt;</span>
+            </div>
+
+            <div class="bio__group">
+                <span class="code-tag">
+                    &lt;p&gt;
+                </span>
+                <p class="bio__subtext">
+                    I partner with businesses to create powerful, user-focused web solutions.
+                    Looking for someone who gets things done?
+                </p>
+                <span class="code-tag">&lt;/p&gt;</span>
+            </div>
+
+            <div class="bio__wrapper-3">
+                <h2 class="bio__title">Let's Talk</h2>
+                <a href="https://mail.google.com" class="bio__link">
+                    <svg class="bio__img" viewBox="0 -960 960 960" width="70px">
+                        <path
+                            d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="about" id="about">
+        <section class="about__content" id="about-content">
+            <div class="about__text-wrapper" id="about-text-wrapper">
+                <code class="about__code about__code--top">
+                        <span class="about__code-line about__code-line--top" id="about-code-top">&lt;p&gt;</span>
+                    </code>
+                <h1 class="about__greeting" id="about-greeting"></h1>
+                <p class="about__description" id="about-description"></p>
+
+                <code class="about__code about__code--bottom">
+                        <span class="about__code-line about__code-line--bottom" id="about-code-bottom">&lt;/p&gt;</span>
+                    </code>
+            </div>
+            <img src="assets/image/photo_2025-10-19_19-47-04.jpg" alt="Portrait of Aryngazy, frontend developer"
+                class="about__image" id="about-image">
+        </section>
+    </div>
+    <div class="hard__skills" id="skills">
+        <div class="container__skills">
+            <div class="skills__header">
+                <h2 class="skills__main-title">Hard Skills</h2>
+                <div class="skills__line"></div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card__inner">
+                    <div class="skill-card__side--front">
+                        <img class="skill-card__icon" src="assets/image/React-icon.svg.png" alt="React">
+                        <h2 class="skill-card__title">React</h2>
+                    </div>
+                    <div class="skill-card__side--back">
+                        <span class="skill-card__id">#001</span>
+                        <h3 class="skill-card__title">React</h3>
+                        <div class="skill-card__tags">
+                            <span class="skill-card__tag">Hooks</span>
+                            <span class="skill-card__tag">Context API</span>
+                            <span class="skill-card__tag">Components</span>
+                        </div>
+                        <p class="skill-card__description">Building high-performance SPAs with functional components
+                            and modern state management.</p>
+                        <div class="skill-card__status">
+                            <span class="status-dot"></span> Proficiency: 45%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card__inner">
+                    <div class="skill-card__side--front">
+                        <img class="skill-card__icon" src="assets/image/images.png" alt="JavaScript">
+                        <h2 class="skill-card__title">JavaScript</h2>
+                    </div>
+                    <div class="skill-card__side--back">
+                        <span class="skill-card__id">#002</span>
+                        <h3 class="skill-card__title">JavaScript</h3>
+                        <div class="skill-card__tags">
+                            <span class="skill-card__tag">ES6+</span>
+                            <span class="skill-card__tag">OOP</span>
+                            <span class="skill-card__tag">API</span>
+                        </div>
+                        <p class="skill-card__description">Writing clean, logic-driven code.</p>
+                        <div class="skill-card__status">
+                            <span class="status-dot"></span> Proficiency: 70%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card__inner">
+                    <div class="skill-card__side--front">
+                        <img class="skill-card__icon" src="assets/image/HTML-5-Badge-Logo.png" alt="Html">
+                        <h2 class="skill-card__title">Html</h2>
+                    </div>
+                    <div class="skill-card__side--back">
+                        <span class="skill-card__id">#003</span>
+                        <h3 class="skill-card__title">Html</h3>
+                        <div class="skill-card__tags">
+                            <span class="skill-card__tag">Semantic</span>
+                            <span class="skill-card__tag">SEO</span>
+                            <span class="skill-card__tag">Forms</span>
+                        </div>
+                        <p class="skill-card__description">Crafting accessible, well-structured, and
+                            search-engine-optimized web pages.</p>
+                        <div class="skill-card__status">
+                            <span class="status-dot"></span> Proficiency: 85%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card__inner">
+                    <div class="skill-card__side--front">
+                        <img class="skill-card__icon" src="assets/image/css3.svg" alt="Css">
+                        <h2 class="skill-card__title">CSS</h2>
+                    </div>
+                    <div class="skill-card__side--back">
+                        <span class="skill-card__id">#004</span>
+                        <h3 class="skill-card__title">CSS</h3>
+                        <div class="skill-card__tags">
+                            <span class="skill-card__tag">FlexBox</span>
+                            <span class="skill-card__tag">Grid</span>
+                            <span class="skill-card__tag">Animations</span>
+                        </div>
+                        <p class="skill-card__description">Creating responsive, pixel-perfect layouts with advanced
+                            styling and smooth transitions.</p>
+                        <div class="skill-card__status">
+                            <span class="status-dot"></span> Proficiency: 80%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card__inner">
+                    <div class="skill-card__side--front">
+                        <img class="skill-card__icon" src="assets/image/Figma-logo.svg" alt="figma">
+                        <h2 class="skill-card__title">figma</h2>
+                    </div>
+                    <div class="skill-card__side--back">
+                        <span class="skill-card__id">#005</span>
+                        <h3 class="skill-card__title">Figma</h3>
+                        <div class="skill-card__tags">
+                            <span class="skill-card__tag">UI/UX</span>
+                            <span class="skill-card__tag">Prototyping</span>
+                            <span class="skill-card__tag">Design Systems</span>
+                        </div>
+                        <p class="skill-card__description">Translating complex design layouts into clean,
+                            maintainable frontend code.</p>
+                        <div class="skill-card__status">
+                            <span class="status-dot"></span> Proficiency: 70%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card__inner">
+                    <div class="skill-card__side--front">
+                        <img class="skill-card__icon" src="assets/image/logo_d56de931a1.svg" alt="Vite">
+                        <h2 class="skill-card__title">Vite</h2>
+                    </div>
+                    <div class="skill-card__side--back">
+                        <span class="skill-card__id">#006</span>
+                        <h3 class="skill-card__title">Vite</h3>
+                        <div class="skill-card__tags">
+                            <span class="skill-card__tag">Bundling</span>
+                            <span class="skill-card__tag">ESBuild</span>
+                            <span class="skill-card__tag">HMR</span>
+                        </div>
+                        <p class="skill-card__description">Optimizing development workflow with ultra-fast build
+                            tools and environment setup.</p>
+                        <div class="skill-card__status">
+                            <span class="status-dot"></span> Proficiency: 50%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card__inner">
+                    <div class="skill-card__side--front">
+                        <img class="skill-card__icon" src="assets/image/18133.png" alt="Git">
+                        <h2 class="skill-card__title">Git</h2>
+                    </div>
+                    <div class="skill-card__side--back">
+                        <span class="skill-card__id">#007</span>
+                        <h3 class="skill-card__title">Git</h3>
+                        <div class="skill-card__tags">
+                            <span class="skill-card__tag">Branching</span>
+                            <span class="skill-card__tag">PRs</span>
+                            <span class="skill-card__tag">Version Control</span>
+                        </div>
+                        <p class="skill-card__description">Managing code versions and collaborating effectively
+                            using industry-standard workflows.</p>
+                        <div class="skill-card__status">
+                            <span class="status-dot"></span> Proficiency: 60%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card__inner">
+                    <div class="skill-card__side--front">
+                        <img class="skill-card__icon" src="assets/image/Tailwind_CSS_Logo.svg.png" alt="TailWind">
+                        <h2 class="skill-card__title">TailWind</h2>
+                    </div>
+                    <div class="skill-card__side--back">
+                        <span class="skill-card__id">#008</span>
+                        <h3 class="skill-card__title">TailWind</h3>
+                        <div class="skill-card__tags">
+                            <span class="skill-card__tag">Utility-First</span>
+                            <span class="skill-card__tag">Responsive</span>
+                            <span class="skill-card__tag">Customization</span>
+                        </div>
+                        <p class="skill-card__description">Rapidly building modern interfaces without leaving your
+                            HTML, using highly efficient utility classes.</p>
+                        <div class="skill-card__status">
+                            <span class="status-dot"></span> Proficiency: 65%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card__inner">
+                    <div class="skill-card__side--front">
+                        <img class="skill-card__icon" src="assets/image/Sass_Logo_Color.svg.png" alt="Sass">
+                        <h2 class="skill-card__title">Sass</h2>
+                    </div>
+                    <div class="skill-card__side--back">
+                        <span class="skill-card__id">#009</span>
+                        <h3 class="skill-card__title">Sass</h3>
+                        <div class="skill-card__tags">
+                            <span class="skill-card__tag">Mixins</span>
+                            <span class="skill-card__tag">Variables</span>
+                            <span class="skill-card__tag">Nesting</span>
+                        </div>
+                        <p class="skill-card__description">Writing clean, modular, and reusable stylesheets using
+                            advanced preprocessor features.</p>
+                        <div class="skill-card__status">
+                            <span class="status-dot"></span> Proficiency: 85%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="soft__skills">
+            <h2 class="skill-card__title">Soft Skills</h2>
+            <div class="soft-skill">
+                <span class="soft-skill__name">Problem Solving</span>
+                <div class="soft-skill__bar">
+                    <div class="soft-skill__fill" data-target="90"></div>
+                </div>
+            </div>
+            <div class="soft-skill">
+                <span class="soft-skill__name">Communication</span>
+                <div class="soft-skill__bar">
+                    <div class="soft-skill__fill" data-target="85"></div>
+                </div>
+            </div>
+            <div class="soft-skill">
+                <span class="soft-skill__name">Adaptability</span>
+                <div class="soft-skill__bar">
+                    <div class="soft-skill__fill" data-target="80"></div>
+                </div>
+            </div>
+            <div class="soft-skill">
+                <span class="soft-skill__name">Attention to Detail</span>
+                <div class="soft-skill__bar">
+                    <div class="soft-skill__fill" data-target="85"></div>
+                </div>
+            </div>
+            <div class="soft-skill">
+                <span class="soft-skill__name">Critical Thinking</span>
+                <div class="soft-skill__bar">
+                    <div class="soft-skill__fill" data-target="79"></div>
+                </div>
+            </div>
+            <div class="soft-skill">
+                <span class="soft-skill__name">English</span>
+                <div class="soft-skill__bar">
+                    <div class="soft-skill__fill" data-target="68"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="works" id="works">
+        <div class="works__header">
+            <div class="works__title-group">
+                <h2 class="works__main-title">Selected Works</h2>
+                <div class="works__counter"><span id="active-num">01</span> / 03</div>
+            </div>
+            <div class="works__nav">
+                <button class="nav-btn prev" id="slide-prev">←</button>
+                <button class="nav-btn next" id="slide-next">→</button>
+            </div>
+        </div>
+        <div class="works__track-container" id="works-track">
+            <div class="works__track">
+                <div class="work-card">
+                    <div class="work-card__wrapper">
+                        <img src="assets/image/Снимок экрана 2026-01-29 210108.png" alt="Project 1"
+                            class="work-card__img">
+                        <div class="work-card__glass">
+                            <div class="glass__content">
+                                <span class="glass__tag">Html / Css / Scss / js</span>
+                                <h3 class="glass__title">Future Tech</h3>
+                                <p class="glass__desc">A next-generation digital ecosystem featuring glassmorphism
+                                    UI and seamless interactive experiences.</p>
+                                <div class="glass__links">
+                                    <a href="#" class="glass__btn">Live Demo</a>
+                                    <a href="https://github.com/Ex1zeenn/FutureTech.git"
+                                        class="glass__btn secondary">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <div class="work-card__wrapper">
+                        <img src="assets/image/Снимок экрана 2026-01-29 214706.png" alt="Project 2"
+                            class="work-card__img">
+                        <div class="work-card__glass">
+                            <div class="glass__content">
+                                <span class="glass__tag">Html / Css / Js</span>
+                                <h3 class="glass__title">Grilli</h3>
+                                <p class="glass__desc">A luxury restaurant landing page featuring immersive scroll
+                                    animations, parallax effects, and a sophisticated dark aesthetic designed to
+                                    drive reservations..</p>
+                                <div class="glass__links">
+                                    <a href="#" class="glass__btn">Live Demo</a>
+                                    <a href="#" class="glass__btn secondary">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <div class="work-card__wrapper">
+                        <img src="assets/image/Снимок экрана 2026-01-30 175425.png" alt="Project 3"
+                            class="work-card__img">
+                        <div class="work-card__glass">
+                            <div class="glass__content">
+                                <span class="glass__tag">Html / Css / Js</span>
+                                <h3 class="glass__title">My Portfolio</h3>
+                                <p class="glass__desc">A curated collection of digital experiences, where clean code
+                                    meets avant-garde design. Every pixel is a calculated step toward the future.
+                                </p>
+                                <div class="glass__links">
+                                    <a href="#" class="glass__btn">Live Demo</a>
+                                    <a href="#" class="glass__btn secondary">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="works__progress">
+            <div class="works__progress-fill" id="progress-fill"></div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="contact__wrapper">
+            <div class="contact__header">
+                <h2 class="contact__title">
+                    <span class="tag-accent">&lt;h2&gt;</span>
+                    GET IN TOUCH
+                    <span class="tag-accent">&lt;/h2&gt;</span>
+                </h2>
+            </div>
+            <div class="contact__content">
+                <div class="contact__info">
+                    <div class="info__item">
+                        <span class="tag-accent--large">&lt;p&gt;</span>
+                        <p class="contact__desc">
+                            Ready to start a project or just want to say hi? My inbox is always open.
+                        </p>
+                        <span class="tag-accent--large">&lt;/p&gt;</span>
+                    </div>
+                    <div class="contact__status">
+                        <span class="status-dot"></span>
+                        <span>AVAILABLE FOR FREELANCE</span>
+                    </div>
+                    <div class="contact__socials">
+                        <a href="mailto:maratulyaryngazy@gmail.com" class="social-btn">EMAIL</a>
+                        <a href="#" class="social-btn">TELEGRAM</a>
+                        <a href="#" class="social-btn">TIKTOK</a>
+                    </div>
+                </div>
+                <form class="contact__form">
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label>SYSTEM.USER_NAME</label>
+                            <input type="text" placeholder="Who are you?" required>
+                        </div>
+                        <div class="form__group">
+                            <label>SYSTEM.EMAIL</label>
+                            <input type="email" placeholder="Where to reply?" required>
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <label>SYSTEM.MESSAGE_DATA</label>
+                        <textarea rows="4" placeholder="Briefly describe your idea..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>EXECUTE_SEND</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer" id="footer">
+    <div class="footer__content">
+        <div class="footer__left">
+            <span class="code-tag">&copy; 2026</span>
+            <span class="footer__name">ARYNGAZY.DEV</span>
+        </div>
+        <div class="footer__center">
+            <span class="footer__status">DESIGNED & BUILT BY HAND</span>
+        </div>
+        <div class="footer__right">
+            <a href="#home" class="footer__link">BACK_TO_TOP</a>
+        </div>
+    </div>
+</footer>
+<script src="assets/scripts/main.js" defer></script>
+<script src="assets/scripts/burger-menu.js" defer></script>
+</body>
+
+</html>
