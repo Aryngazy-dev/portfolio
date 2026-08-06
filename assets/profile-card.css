@@ -1,0 +1,44 @@
+.profile__card {
+    background: var(--base-variant);
+    border: 1px solid var(--border-soft);
+    border-radius: 16px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 12px 30px var(--shadow-color);
+    transition: box-shadow 0.3s ease;
+}
+
+.profile__card:hover {
+    box-shadow: 0 16px 36px var(--shadow-color);
+}
+
+.profile__avatar {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 3px solid var(--surface-color);
+    object-fit: cover;
+    margin-bottom: 25px;
+    box-shadow: 0 0 0 4px var(--border-soft);
+    transition: box-shadow 0.3s ease;
+}
+
+.profile__card:hover .profile__avatar {
+    box-shadow: 0 0 0 2px var(--accent-color);
+}
+
+.profile__name { font-size: 32px; margin-bottom: 5px; color: var(--text-color); }
+.profile__role { font-size: 18px; color: var(--accent-color); margin-bottom: 30px; }
+
+.profile__email, .profile__location, .profile__work {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+}
+
+.profile__card svg { fill: var(--accent-color); width: 20px; }
+
